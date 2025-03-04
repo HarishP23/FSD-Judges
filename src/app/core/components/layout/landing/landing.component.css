@@ -1,0 +1,139 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f3f5;
+    color: #333;
+}
+
+/* Landing section */
+.landing-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #343a40, #495057); /* Gradient matching header/footer */
+    color: #fff;
+    border-radius: 15px;
+}
+
+.landing-section h2 {
+    font-size: 42px;
+    color: #ff9900;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.landing-section .description {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Judges container */
+.judges-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Judge Card */
+.judge-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.judge-card:hover {
+    transform: translateY(-10px); /* Hover effect */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.judge-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 4px solid #ff9900; /* Adding border matching theme */
+}
+
+.judge-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.judge-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.judge-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Button style */
+.view-details-btn {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #e68900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landing-section {
+        padding: 30px 20px;
+    }
+
+    .landing-section h2 {
+        font-size: 36px;
+    }
+
+    .landing-section .description {
+        font-size: 16px;
+    }
+
+    .judge-card h3 {
+        font-size: 20px;
+    }
+
+    .judge-card p {
+        font-size: 14px;
+    }
+
+    .view-details-btn {
+        font-size: 14px;
+        padding: 8px 18px;
+    }
+}

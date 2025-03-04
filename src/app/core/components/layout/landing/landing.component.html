@@ -1,70 +1,113 @@
 <main>
     <section class="landing-section">
-        <h2>Meet Our Judges</h2>
-        <p class="description">Our distinguished panel of judges is here to make this event extraordinary! Get to know them below.</p>
-        
-        <div class="judges-container">
-            <div class="judge-card">
-                <div class="judge-photo">
-                    <img src="https://via.placeholder.com/150" alt="Judge 1">
-                </div>
-                <h3>Judge Name 1</h3>
-                <p>Short description about the judge's experience, background, or expertise.</p>
-            </div>
-
-            <div class="judge-card">
-                <div class="judge-photo">
-                    <img src="https://via.placeholder.com/150" alt="Judge 2">
-                </div>
-                <h3>Judge Name 2</h3>
-                <p>Short description about the judge's experience, background, or expertise.</p>
-            </div>
-
-            <div class="judge-card">
-                <div class="judge-photo">
-                    <img src="https://via.placeholder.com/150" alt="Judge 3">
-                </div>
-                <h3>Judge Name 3</h3>
-                <p>Short description about the judge's experience, background, or expertise.</p>
-            </div>
-
-            <div class="judge-card">
-                <div class="judge-photo">
-                    <img src="https://via.placeholder.com/150" alt="Judge 4">
-                </div>
-                <h3>Judge Name 4</h3>
-                <p>Short description about the judge's experience, background, or expertise.</p>
-            </div>
-
-            <div class="judge-card">
-                <div class="judge-photo">
-                    <img src="https://via.placeholder.com/150" alt="Judge 5">
-                </div>
-                <h3>Judge Name 5</h3>
-                <p>Short description about the judge's experience, background, or expertise.</p>
-            </div>
-
-            <div class="judge-card">
-                <div class="judge-photo">
-                    <img src="https://via.placeholder.com/150" alt="Judge 6">
-                </div>
-                <h3>Judge Name 6</h3>
-                <p>Short description about the judge's experience, background, or expertise.</p>
-            </div>
-            <div class="judge-card">
-                <div class="judge-photo">
-                    <img src="https://via.placeholder.com/150" alt="Judge 6">
-                </div>
-                <h3>Judge Name 7</h3>
-                <p>Short description about the judge's experience, background, or expertise.</p>
-            </div>
-            <div class="judge-card">
-                <div class="judge-photo">
-                    <img src="https://via.placeholder.com/150" alt="Judge 6">
-                </div>
-                <h3>Judge Name 8</h3>
-                <p>Short description about the judge's experience, background, or expertise.</p>
-            </div>
+      <h2>Meet Our Judges</h2>
+      <p class="description">Our distinguished panel of judges is here to make this event extraordinary! Get to know them below.</p>
+      
+      <div class="judges-container">
+        <div class="judge-card">
+          <div class="judge-photo">
+            <img src="https://via.placeholder.com/150" alt="Judge 1">
+          </div>
+          <h3>Judge Name 1</h3>
+          <p>Short description about the judge's experience, background, or expertise.</p>
         </div>
+  
+        <div class="judge-card">
+          <div class="judge-photo">
+            <img src="https://via.placeholder.com/150" alt="Judge 2">
+          </div>
+          <h3>Judge Name 2</h3>
+          <p>Short description about the judge's experience, background, or expertise.</p>
+        </div>
+  
+        <div class="judge-card">
+          <div class="judge-photo">
+            <img src="https://via.placeholder.com/150" alt="Judge 3">
+          </div>
+          <h3>Judge Name 3</h3>
+          <p>Short description about the judge's experience, background, or expertise.</p>
+        </div>
+  
+        <div class="judge-card">
+          <div class="judge-photo">
+            <img src="https://via.placeholder.com/150" alt="Judge 4">
+          </div>
+          <h3>Judge Name 4</h3>
+          <p>Short description about the judge's experience, background, or expertise.</p>
+        </div>
+  
+        <div class="judge-card">
+          <div class="judge-photo">
+            <img src="https://via.placeholder.com/150" alt="Judge 5">
+          </div>
+          <h3>Judge Name 5</h3>
+          <p>Short description about the judge's experience, background, or expertise.</p>
+        </div>
+  
+        <div class="judge-card">
+          <div class="judge-photo">
+            <img src="https://via.placeholder.com/150" alt="Judge 6">
+          </div>
+          <h3>Judge Name 6</h3>
+          <p>Short description about the judge's experience, background, or expertise.</p>
+        </div>
+  
+        <div class="judge-card">
+          <div class="judge-photo">
+            <img src="https://via.placeholder.com/150" alt="Judge 7">
+          </div>
+          <h3>Judge Name 7</h3>
+          <p>Short description about the judge's experience, background, or expertise.</p>
+        </div>
+  
+        <div class="judge-card">
+          <div class="judge-photo">
+            <img src="https://via.placeholder.com/150" alt="Judge 8">
+          </div>
+          <h3>Judge Name 8</h3>
+          <p>Short description about the judge's experience, background, or expertise.</p>
+        </div>
+      </div>
+      
+      <!-- Button to open the form -->
+      <button class="open-form-btn" (click)="toggleForm()">Apply as a Judge</button>
+      
+      <!-- The form (Initially hidden) -->
+      <div class="form-container" *ngIf="isFormVisible">
+        <form>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          
+          <!-- <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required> -->
+          
+          <label for="linkedin">LinkedIn Profile Link:</label>
+          <input type="url" id="linkedin" name="linkedin" placeholder="Enter your LinkedIn profile link" required>
+          
+          <label for="experience">Professional Experience:</label>
+          <textarea id="experience" name="experience" placeholder="Describe your professional experience" required></textarea>
+  
+          <label for="years-of-experience">Number of Years of Experience:</label>
+          <select id="years-of-experience" name="years-of-experience" required>
+            <option value="" disabled selected>Select your years of experience</option>
+            <option value="1-2">1-2 years</option>
+            <option value="3-5">3-5 years</option>
+            <option value="6-10">6-10 years</option>
+            <option value="10+">10+ years</option>
+          </select>
+  
+          <label for="expertise">Field of Expertise:</label>
+          <input type="text" id="expertise" name="expertise" placeholder="Enter your field of expertise" required>
+          
+          <label for="why-judge">Why Should You Be a Judge?</label>
+          <textarea id="why-judge" name="why-judge" placeholder="Explain why you are suitable to be a judge" required></textarea>
+          
+          <button type="submit">Submit Application</button>
+        </form>
+      </div>
     </section>
-</main>
+  </main>
+  

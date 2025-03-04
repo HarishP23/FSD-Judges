@@ -110,6 +110,70 @@ body {
     background-color: #e68900;
 }
 
+/* Button for form toggle at the bottom-right corner */
+.open-form-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.open-form-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Form container (Initially hidden) */
+.form-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .landing-section {
@@ -135,5 +199,15 @@ body {
     .view-details-btn {
         font-size: 14px;
         padding: 8px 18px;
+    }
+
+    .open-form-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .form-container {
+        width: 250px;
+        bottom: 70px;
     }
 }
